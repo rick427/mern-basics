@@ -40,14 +40,12 @@ class CreateExercise extends Component {
         const {username, description, duration, date} = this.state;
 
         const newExercise = {username,description, duration,date};
-
-        console.log(newExercise);
         axios.post('http://localhost:5000/api/exercises/add', newExercise)
            .then(res => console.log(res.data));
         
         setTimeout(() => {
             window.location = "/";
-        },2500)
+        },2000)
     }
 
     render() {
